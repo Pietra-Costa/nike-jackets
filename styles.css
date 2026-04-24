@@ -69,7 +69,7 @@ img {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: var(--black-color);
+    /* background-color: var(--black-color); */
     width: 100%;
 }
 
@@ -85,7 +85,9 @@ nav{
     width: 50px;
 }
 
-
+.home-swipe{
+  height: 100vh;
+}
 
 .menu ul{
     display: flex;
@@ -97,6 +99,116 @@ nav{
     color: var(--white-color);
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.home-slider{
+  display: grid;
+  padding-block: 9rem 3rem;
+  position: relative;
+  height: 100vh;
+  align-items: center;
+  row-gap: 4rem;
+}
+
+.home-logos{
+  position: absolute;
+  top: calc(50% - 12rem);
+  justify-self: center;
+  opacity: .4;
+}
+
+.home-logo-3{
+  width: 320px;
+}
+
+.home-logo-2{
+  position: absolute;
+  width: 270px;
+  bottom: 60px;
+  left: 45px;
+  rotate: calc(6deg);
+}
+
+.home-logo-1{
+  position: absolute;
+  width: 200px;
+  left: 95px;
+  bottom: 115px;
+  rotate: calc(11deg);
+}
+
+.home-image{
+  justify-self: center;
+  z-index: 10;
+  width: 80%;
+}
+
+.home-image img{
+  width: 320px;
+  justify-self: center;
+  margin-top: 40px;
+}
+
+.home-green{
+  background: var(--green-color-gradient);
+}
+
+.home-orange{
+  background: var(--orange-color-gradient);
+}
+
+.home-blue{
+  background: var(--sky-blue-color-gradient);
+}
+
+.home-purple{
+  background: var(--purple-color-gradient);
+}
+
+.home-data{
+  text-align: center;
+  margin-top: 80px;
+  color: var(--white-color);
+}
+
+.home-name{
+  font-size: var(--bigger-font-size);
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.home-price{
+  font: 600 var(--bigger-font-size) var(--body-font);
+  margin-block: 1rem 2rem;
+}
+
+.button-home{
+  background-color: var(--white-color);
+  padding: 13px 18px;
+  border-radius: 40px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 600;
+  justify-self: center;
+  transition: box-shadow .4s;
+}
+
+.button-home i{
+  font-weight: initial;
+  font-size: 1.5rem;
+}
+
+.button-home:hover{
+  box-shadow: 0 0 10px var(--white-color);
+}
+
+.home{
+  position: relative;
+}
+
+.swiper-pagination{
+  margin-bottom: 360px;
 }
 
 @media(width <= 1150px){

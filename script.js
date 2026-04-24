@@ -27,6 +27,23 @@ function openMenu(){
     })
 }
 
+const swiperHome = new Swiper('.home-swipe', {
+  loop: true,
+  speed: 800,
+  effect: 'fade',
+  parallax: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  autoplay:{
+    delay: 3000,
+    disableOnInteraction: false,
+  }
+});
+
 openMenu()
 closeMenu()
 activateLink()
