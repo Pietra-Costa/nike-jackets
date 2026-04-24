@@ -2,6 +2,9 @@
 
 Este projeto é uma landing page responsiva para jaquetas Nike, com carrossel animado usando Swiper.js, menu mobile, e design moderno.
 
+<img width="1432" height="872" alt="image" src="https://github.com/user-attachments/assets/262210a9-f3ed-4570-9bcb-2fe9aaef4e99" />
+
+
 ## Funcionalidades
 
 - Carrossel de jaquetas com transição fade, parallax e autoplay
