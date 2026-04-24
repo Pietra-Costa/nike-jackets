@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --header-height: 3.5rem;
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --green-color-gradient: linear-gradient(135deg, hsl(98, 63%, 37%) 0%, hsl(97, 45%, 71%) 100%);
+  --orange-color-gradient: linear-gradient(135deg, hsl(17, 98%, 56%) 0%, hsl(14, 97%, 64%) 100%);
+  --sky-blue-color-gradient: linear-gradient(135deg, hsl(210, 96%, 55%) 0%, hsl(205, 51%, 73%) 100%);
+  --purple-color-gradient: linear-gradient(135deg, hsl(259, 92%, 63%) 0%, hsl(260, 52%, 68%) 100%);
+
+  --body-font: "Montserrat", sans-serif;
+  --bigger-font-size: 1.75rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+}
+
+@media (width >= 1150px) {
+  :root {
+    --bigger-font-size: 2.5rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+body,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--black-color);
+    width: 100%;
+}
+
+nav{
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 50px;
+}
+
+.menu ul{
+    display: flex;
+    color: var(--white-color);
+    gap: 1.5rem;
+}
+
+.menu-icons i{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media(width <= 1150px){
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: hsla(0, 0%, 0%, 1);
+        backdrop-filter: blur(12px);
+        padding-block: 4rem;
+        z-index: 100;
+        transition: top .4s;
+    }
+
+    .menu ul{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu ul li a{
+        position: relative;
+        color: var(--white-color);
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .menu ul li a::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: var(--white-color);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -.5rem;
+        transition: width .4s;
+    }
+
+    .menu ul li a:hover::after{
+        width: 100%;
+    }
+
+    .nav{
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        z-index: 100000;
+        cursor: pointer;
+    }
+
+    .close i{
+        font-size: 1.5rem;
+        color: var(--white-color);
+        z-index: 100000;
+    }
+
+    .menu ul li a.active-link::after{
+    width: 100%;
+    }
+}
