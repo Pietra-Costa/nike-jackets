@@ -85,6 +85,8 @@ nav{
     width: 50px;
 }
 
+
+
 .menu ul{
     display: flex;
     color: var(--white-color);
@@ -103,11 +105,15 @@ nav{
         top: 0;
         left: 0;
         width: 100%;
-        background-color: hsla(0, 0%, 0%, 1);
+        background-color: hsla(0, 0%, 0%, .1);
         backdrop-filter: blur(12px);
         padding-block: 4rem;
         z-index: 100;
         transition: top .4s;
+    }
+
+    .menu.close-menu{
+      top: -400px;
     }
 
     .menu ul{
@@ -161,4 +167,66 @@ nav{
     .menu ul li a.active-link::after{
     width: 100%;
     }
+
+    .menu-icons{
+      display: flex;
+      gap: 1rem;
+    }
+}
+
+@media(width > 1151px){
+    .container{
+      margin-inline: auto;
+    }
+
+    .nav{
+      height: calc(var(--header-height) + 2rem);
+    }
+
+    .logo{
+      width: 70px;
+    }
+
+    .close{
+      display: none;
+    }
+
+    .ri-menu-line{
+      display: none;
+    }
+
+    .menu-icons{
+      display: flex;
+      gap: 1rem;
+    }
+
+    .menu ul{
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+    }
+
+     .menu ul li a{
+        position: relative;
+        color: var(--white-color);
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .menu ul li a::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: var(--white-color);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -.5rem;
+        transition: width .4s;
+    }
+
+    .menu ul li a:hover::after{
+        width: 100%;
+    }
+  
 }
